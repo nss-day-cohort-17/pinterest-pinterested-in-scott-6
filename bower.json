@@ -3,12 +3,20 @@
   "description": "",
   "main": "",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/nss-day-cohort-17/pinterest-pinterested-in-scott-6",
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
-  ]
+    "tests",
+    "lib"
+  ],
+  "authors": [
+    "John McCutchan <john.mccutchan.wd@gmail.com>"
+  ],
+  "dependencies": {
+    "angular-route": "^1.6.1",
+    "bootstrap": "^3.3.7"
+  }
 }
