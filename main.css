@@ -10,7 +10,9 @@ John
 padding: 1em;
   margin-top: 2em;
 }
-
+.topMarg{
+  margin-top:20px;
+}
 
 /* Skin ============================================= */
 body {
@@ -24,17 +26,10 @@ body {
 #newPin { /* new pin form */
   border: 1.5px solid white;
   border-radius: 1em;
-} 
+}
 
 /* Breakpoints ====================================== */
 
 
 
 /* END ============================================== */
-
-
-
-
-
-
-
