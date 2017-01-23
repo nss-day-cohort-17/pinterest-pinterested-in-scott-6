@@ -1,6 +1,20 @@
+/*  Team Pinterested in Scott
+Joel
+Luke
+John
+*/
 /*ALT FONT font-family: 'Work Sans', sans-serif;*/
 
+/* Structure ======================================== */
+#newPin { /* new pin form */
+padding: 1em;
+  margin-top: 2em;
+}
+.topMarg{
+  margin-top:20px;
+}
 
+/* Skin ============================================= */
 body {
   background-color: grey;
   color: white;
@@ -36,10 +50,18 @@ input:focus {
   margin-top: 7px;
 }
 
-#newPin {
+
+.lightgray{
+  background-color:rgba(189, 195, 199,1.0);
+}
+
+#newPin { /* new pin form */
   border: 1.5px solid white;
   border-radius: 1em;
-  padding: 1em;
-  margin-top: 2em;
-
 }
+
+/* Breakpoints ====================================== */
+
+
+
+/* END ============================================== */
