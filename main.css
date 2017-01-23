@@ -1,8 +1,23 @@
+/*  Team Pinterested in Scott
+Joel
+Luke
+John
+*/
 /*ALT FONT font-family: 'Work Sans', sans-serif;*/
-    
+/* Structure ======================================== */
 
+
+/* Skin ============================================= */
 body {
-    background-color: grey;
-    color: white;
-    font-family: 'Source Sans Pro', sans-serif;
+  background-color: grey;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
 }
+.lightgray{
+  background-color:rgba(189, 195, 199,1.0);
+}
+/* Breakpoints ====================================== */
+
+
+
+/* END ============================================== */
