@@ -1,19 +1,40 @@
+/*  Team Pinterested in Scott
+Joel
+Luke
+John
+*/
 /*ALT FONT font-family: 'Work Sans', sans-serif;*/
 
-
-body {
-    background-color: grey;
-    color: white;
-    font-family: 'Source Sans Pro', sans-serif;
+/* Structure ======================================== */
+#newPin { /* new pin form */
+padding: 1em;
+  margin-top: 2em;
 }
 
 
-/****************/
-/* new pin form */
-#newPin {
+/* Skin ============================================= */
+body {
+  background-color: grey;
+  color: white;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.lightgray{
+  background-color:rgba(189, 195, 199,1.0);
+}
+#newPin { /* new pin form */
   border: 1.5px solid white;
   border-radius: 1em;
-  padding: 1em;
-  margin-top: 2em;
+} 
 
-}
+/* Breakpoints ====================================== */
+
+
+
+/* END ============================================== */
+
+
+
+
+
+
+
