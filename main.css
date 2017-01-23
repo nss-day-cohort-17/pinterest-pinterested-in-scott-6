@@ -12,9 +12,9 @@ body {
 }
 
 .user-search {
-  height: 40px;
+  max-height: 40px;
   border-radius: 3px;
-  width: 80%;
+  width: 100%;
   background-color: lightgrey;
   padding: 2% 2.2% 2.3%;
   font-size: 2em;
@@ -31,8 +31,9 @@ input:focus {
 
 .glyphicon {
   font-size: 20px;
-  margin: 0  1%  0 3%;
   color: grey;
+  text-align: center;
+  margin-top: 7px;
 }
 
 #newPin {
