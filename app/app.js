@@ -1,1 +1,1 @@
-const app = angular.module('pinApp', [ngRoute])
+const app = angular.module('pinApp', ['ngRoute'])
