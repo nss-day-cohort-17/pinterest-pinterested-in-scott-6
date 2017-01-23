@@ -1,8 +1,17 @@
 /*ALT FONT font-family: 'Work Sans', sans-serif;*/
-    
+
 
 body {
     background-color: grey;
     color: white;
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+.navbar {
+    padding: 1%;
+}
+
+.user-search {
+    width: 70%;
+    background-color: lightgrey;
 }
