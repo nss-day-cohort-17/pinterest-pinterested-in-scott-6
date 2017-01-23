@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Pinterest Reimagine</title>
+    <title>Pinterest Reimagined</title>
     <!-- Bootstrap -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,700|Work+Sans:100,200,700" rel="stylesheet">
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
@@ -18,7 +18,7 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="/main.css">
   </head>
-  
+
   <body class="lightgray">
     <div class="container">
       <div class="row">
@@ -43,19 +43,22 @@
 
       </div><!-- / ng-app -->
     </div><!-- / ng-container -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <!-- lib/dependencies -->
     <script src="/lib/jquery/dist/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- Angular Library -->
     <script src="/lib/angular/angular.min.js"></script>
-    <!-- ngRoute Library -->
     <script src="/lib/angular-route/angular-route.min.js"></script>
-    <!-- My App -->
+
+    <!-- App -->
     <script src="/app/app.js"></script>
     <script src="/app/config.js"></script>
+
+    <!-- Factories -->
     <script type="text/javascript" src="app/factories/firebase.js"></script>
-    <script src="/app/controllers/RootCtl.js"></script>
-    <script src="/app/controllers/"></script>
+
+    <!-- Controllers -->
+    <script src="/app/controllers/newPin.js"></script>
+    <script src="/app/controllers/profile.js"></script>
   </body>
 </html>
