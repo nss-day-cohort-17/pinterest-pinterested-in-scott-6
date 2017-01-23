@@ -9,14 +9,12 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests",
-    "lib"
-  ],
-  "authors": [
-    "John McCutchan <john.mccutchan.wd@gmail.com>"
+    "tests"
   ],
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.1",
     "angular-route": "^1.6.1",
-    "bootstrap": "^3.3.7"
+    "firebase": "^3.6.6"
   }
 }
