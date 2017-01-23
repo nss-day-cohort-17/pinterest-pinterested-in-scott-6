@@ -1,0 +1,19 @@
+/*ALT FONT font-family: 'Work Sans', sans-serif;*/
+
+
+body {
+    background-color: grey;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/****************/
+/* new pin form */
+#newPin {
+  border: 1.5px solid white;
+  border-radius: 1em;
+  padding: 1em;
+  margin-top: 2em;
+
+}
