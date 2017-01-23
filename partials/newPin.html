@@ -1,39 +1,42 @@
 <!-- New Note -->
 <!-- ++++++++ -->
-<div class="container col-sm-6 col-sm-offset-3 col-xs-12">
-  <form name="newlyNoted" ng-submit="newlyNoted.$valid && addNote(newNote)" novalidate>
+<div class="container col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-4 col-xs-12">
+  <h1>New Pin</h1>
+  <form id="newPin" ng-submit="newlyNoted.$valid && addNote(newNote)" novalidate>
 
-    <div class="col-sm-6">
-      <div class="input-group">
-        <label class="control-label " for="name">Board</label>
-        <div class="input-group-btn">
-          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
-          <ul class="dropdown-menu">
-            <li><a href="#">Board 1</a></li>
-            <li><a href="#">Board 2</a></li>
-            <li><a href="#">Board 3</a></li>
-          </ul>
-        </div><!-- /btn-group -->
-        <!-- <input type="text" class="form-control" aria-label="..."> -->
-      </div><!-- /input-group -->
-    </div><!-- /.col-sm-6 -->
-    <div class="clearfix">...</div>
-
-    <div class="col-sm-6">
-      <div class="form-group"> <!-- Title field -->
-        <label class="control-label " for="subject">Title</label>
-        <input ng-model="newNote.subject" class="form-control" id="subject" name="subject" type="text" required/>
-      </div>
+    <div class="form-group"> <!-- Url field -->
+      <label class="control-label " for="subject">Address</label>
+      <input ng-model="" class="form-control"  name="subject" type="text" placeholder="Website URL" required/>
     </div>
-    <div class="clearfix">...</div>
+    <div class="clearfix"></div>
 
-    <div class="col-sm-6">
-      <div class="form-group"> <!-- Comment field -->
-        <label class="control-label " for="Comment">Comment</label>
-        <textarea ng-model="newNote.message" class="form-control" cols="40" id="message" name="message" rows="5" required></textarea>
-      </div>
+    <div class="form-group"> <!-- Image field -->
+      <label class="control-label " for="subject">Image URL</label>
+      <input ng-model="" class="form-control"  name="subject" type="text" placeholder="Image URL" required/>
     </div>
-    <div class="clearfix">...</div>
+    <div class="clearfix"></div>
+
+    <div class="form-group"><!-- dropdown board selection -->
+      <label class="control-label" for="board">Board</label>
+      <select id="board" class="form-control">
+        <option>Board 1</option>
+        <option>Board 2</option>
+        <option>Board 3</option>
+      </select>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="form-group"> <!-- Title field -->
+      <label class="control-label " for="subject">Title</label>
+      <input ng-model="" class="form-control" name="subject" type="text" placeholder="Title" required/>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="form-group"> <!-- Comment field -->
+      <label class="control-label " for="Comment">Comment</label>
+      <textarea class="form-control" cols="40" name="message" rows="5"  placeholder="Comment" required></textarea>
+    </div>
+    <div class="clearfix"></div>
 
     <div class="form-group">
       <button class="btn btn-danger " name="submit" type="submit">Submit</button>

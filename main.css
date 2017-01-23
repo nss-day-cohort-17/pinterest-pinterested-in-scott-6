@@ -4,7 +4,12 @@ Luke
 John
 */
 /*ALT FONT font-family: 'Work Sans', sans-serif;*/
+
 /* Structure ======================================== */
+#newPin { /* new pin form */
+padding: 1em;
+  margin-top: 2em;
+}
 
 
 /* Skin ============================================= */
@@ -16,8 +21,20 @@ body {
 .lightgray{
   background-color:rgba(189, 195, 199,1.0);
 }
+#newPin { /* new pin form */
+  border: 1.5px solid white;
+  border-radius: 1em;
+} 
+
 /* Breakpoints ====================================== */
 
 
 
 /* END ============================================== */
+
+
+
+
+
+
+
