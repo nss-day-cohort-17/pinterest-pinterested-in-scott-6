@@ -1,15 +1,18 @@
 app.controller('NewPinCrtl', function($scope, firebaseFactory){
   //console.log("NewPinCrtl");
-  $scope.pin = {};
-  $scope.addPin = function() {
-    firebaseFactory.postData($scope.pin);
-    //$http.post('https://mf-user-notes.firebaseio.com/.json', $scope.pin);
-    $scope.pin = {}
-  }
-
+  $scope.checkboxModel = { value : true };
   $scope.board = {};
-  $scope.addBoard = function() {
+  $scope.pin = {};
+
+  $scope.addPin = function() {
+    // if new board is selected, create a board then make the pin run
+   if ($scope.checkboxModel.value === true) {
     firebaseFactory.postData($scope.board);
-    $scope.board = {};
+   } else {
+    firebaseFactory.postData($scope.pin);
+   }
+  // reset the form
+  $scope.board = {};
+  $scope.pin = {}
   }
 })

@@ -18,12 +18,12 @@
 
     <div class="form-group">
       <label class="control-label" for="checkboxBoard">New Board:</label>
-      <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide">
+      <input type="checkbox" ng-model="checkboxModel.value" aria-label="Toggle ngHide">
     </div>
 
-    <div ng-hide="checked" class="form-group"><!-- dropdown board selection -->
+    <div ng-hide="checkboxModel.value" class="form-group"><!-- dropdown board selection -->
       <label class="control-label" for="board">Board</label>
-      <select ng-model="pin.boardName" id="board" class="form-control" required>
+      <select ng-model="board.name" id="board" class="form-control" required>
         <option>Board 1</option>
         <option>Board 2</option>
         <option>Board 3</option>
@@ -32,19 +32,21 @@
       </select>
     </div>
 
-    <div ng-show="checked" class="form-group"> <!-- Board field -->
+    <!-- NEW BOARD -->
+    <div ng-show="checkboxModel.value" class="form-group"> <!-- Board field -->
       <label class="control-label " for="subject">Board</label>
-      <input ng-model="pin.boardName" class="form-control" name="subject" type="text" placeholder="Title" required/>
+      <input ng-model="board.name" class="form-control" name="subject" type="text" placeholder="Title" required/>
     </div>
 
-    <div ng-show="checked" class="form-group"> <!-- Title field -->
+    <div ng-show="checkboxModel.value" class="form-group"> <!-- Title field -->
       <label class="control-label " for="Comment">Board Description</label>
-      <textarea ng-model="pin.boardDescription" class="form-control" cols="40" name="message" rows="5"  placeholder="Board description..." required></textarea>
+      <textarea ng-model="board.description" class="form-control" cols="40" name="message" rows="5"  placeholder="Board description..." required></textarea>
     </div>
+    <!-- END NEW BOARD -->
 
     <div class="form-group"> <!-- Title field -->
       <label class="control-label " for="subject">Pin Title</label>
-      <input ng-model="pin.title" class="form-control" name="subject" type="text" placeholder="Title" required/>
+      <input ng-model="pin.title" class="form-control" name="subject" type="text" placeholder="Pin Title" required/>
       <div class="clearfix"></div>
     </div>
 
