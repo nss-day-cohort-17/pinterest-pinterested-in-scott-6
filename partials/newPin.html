@@ -7,40 +7,55 @@
     <div class="form-group"> <!-- Url field -->
       <label class="control-label " for="subject">Address</label>
       <input ng-model="pin.addressURL" class="form-control"  name="subject" type="text" placeholder="Website URL" required/>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
 
     <div class="form-group"> <!-- Image field -->
       <label class="control-label " for="subject">Image URL</label>
       <input ng-model="pin.imageURL" class="form-control"  name="subject" type="text" placeholder="Image URL" required/>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
 
-    <div class="form-group"><!-- dropdown board selection -->
+    <div class="form-group">
+      <label class="control-label" for="checkboxBoard">New Board:</label>
+      <input type="checkbox" ng-model="checked" aria-label="Toggle ngHide">
+    </div>
+
+    <div ng-hide="checked" class="form-group"><!-- dropdown board selection -->
       <label class="control-label" for="board">Board</label>
       <select ng-model="pin.boardName" id="board" class="form-control" required>
         <option>Board 1</option>
         <option>Board 2</option>
         <option>Board 3</option>
+        <option disabled>──────────</option>
+        <option value="">Select Board</option>
       </select>
     </div>
-    <div class="clearfix"></div>
+
+    <div ng-show="checked" class="form-group"> <!-- Board field -->
+      <label class="control-label " for="subject">Board</label>
+      <input ng-model="pin.boardName" class="form-control" name="subject" type="text" placeholder="Title" required/>
+    </div>
+
+    <div ng-show="checked" class="form-group"> <!-- Title field -->
+      <label class="control-label " for="Comment">Board Description</label>
+      <textarea ng-model="pin.boardDescription" class="form-control" cols="40" name="message" rows="5"  placeholder="Board description..." required></textarea>
+    </div>
 
     <div class="form-group"> <!-- Title field -->
-      <label class="control-label " for="subject">Title</label>
+      <label class="control-label " for="subject">Pin Title</label>
       <input ng-model="pin.title" class="form-control" name="subject" type="text" placeholder="Title" required/>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
 
     <div class="form-group"> <!-- Comment field -->
-      <label class="control-label " for="Comment">Comment</label>
+      <label class="control-label " for="Comment">Pin Comment</label>
       <textarea ng-model="pin.comment" class="form-control" cols="40" name="message" rows="5"  placeholder="Comment" required></textarea>
+      <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
 
     <div class="form-group">
       <button class="btn btn-danger " name="submit" type="submit">Submit</button>
     </div>
-
   </form>
 </div>

@@ -6,8 +6,8 @@ John McCutchan
 /*ALT FONT font-family: 'Work Sans', sans-serif;*/
 /* Structure ======================================== */
 #newPin { /* new pin form */
-padding: 1em;
-  margin-top: 2em;
+  padding: 1em;
+  margin-top: 1em;
 }
 .topMarg{
   margin-top:20px;
@@ -62,6 +62,17 @@ input:focus {
 .modal-content, .modal-footer, .modal-body{
   color:black;
 }
+
+
+/***************************/
+/* new pin form validation */
+.ng-invalid.ng-dirty {
+ border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+ border-color: #78FA89;
+}
+
 /* Breakpoints ====================================== */
 
 
