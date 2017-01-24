@@ -3,9 +3,15 @@ app.factory('firebaseFactory', function($http) {
     getData: () => {
       return $http.get('https://pinterested-in-scott-pins.firebaseio.com/.json');
     },
-    postData: (pin) => {
-      return $http.post('https://pinterested-in-scott-pins.firebaseio.com/.json', pin);
-    }//,
+    postPin: (pin) => {
+      return $http.post('https://pinterested-in-scott-pins.firebaseio.com/pins/.json', pin);
+    },
+    postBoard: (board) => {
+      return $http.post('https://pinterested-in-scott-pins.firebaseio.com/boards/.json', board);
+    },
+    postUser: (user) => {
+      return $http.post('https://pinterested-in-scott-pins.firebaseio.com/users/.json', user);
+    }
     // deleteMessage: (url) => {
     //   return $http.delete(url);
     // }
