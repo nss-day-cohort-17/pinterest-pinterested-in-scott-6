@@ -19,9 +19,9 @@
   <link rel="stylesheet" href="/main.css">
   </head>
 
-  <body class="lightgray">
+  <body ng-app="pinApp" class="lightgray">
 
-    <div ng-app="pinApp" class="container">
+    <div ng-controller="logCtrl" class="container">
       <div class="row">
         <div class="col-md-12 text-center">
           <img src="/images/logo.png" alt="Pinterested in Scott"></div>
@@ -111,5 +111,6 @@
     <!-- Controllers -->
     <script src="/app/controllers/newPin.js"></script>
     <script src="/app/controllers/profile.js"></script>
+    <script src="/app/controllers/log.js"></script>
   </body>
 </html>
