@@ -23,8 +23,8 @@ padding: 1em;
 }
 /* Skin ============================================= */
 body {
-  background-color: grey;
-  color: white;
+  background-color: white;
+  color: grey;
   font-family: 'Source Sans Pro', sans-serif;
 }
 .navbar {
@@ -52,11 +52,15 @@ input:focus {
   text-align: center;
   margin-top: 7px;
 }
+.glyphicon:hover {
+  color: firebrick;
+}
+
 .lightgray{
   background-color:rgba(189, 195, 199,1.0);
 }
 #newPin { /* new pin form */
-  border: 1.5px solid white;
+  border: 1.5px solid grey;
   border-radius: 1em;
 }
 .modal-content, .modal-footer, .modal-body{
