@@ -17,8 +17,8 @@ padding: 1em;
   text-align:center
 }
 .logoMin{
-  min-height:50px;
-  min-width:200px;
+  min-height:45px;
+  min-width:190px;
   display:block;
 }
 /* Skin ============================================= */
@@ -92,6 +92,12 @@ input:focus {
 
 }
 
+.userImg {
+  height: 150px;
+  border-radius: 50%;
+  border: 15px solid lightgray;
+}
+
 .marg {
   margin: 2% 0;
 }
@@ -103,9 +109,7 @@ input:focus {
 }
 
 .board-pin-tog:hover {
-  background-color: lightgray;
-  border-radius: 10px;
-  color: grey;
+  color: firebrick;
   text-decoration: none;
 }
 
@@ -155,4 +159,7 @@ input:focus {
   border-radius: 5px;
 }
 
+.selected {
+  color: firebase;
+}
 /* END ============================================== */

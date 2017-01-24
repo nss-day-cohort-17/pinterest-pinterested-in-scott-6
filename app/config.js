@@ -10,6 +10,10 @@ $locationProvider.hashPrefix('!');
             controller: 'NewPinCrtl',
             templateUrl: '/partials/newPin.html'
         })
+        .when('/pins', {
+            controller: 'PinsCtrls',
+            templateUrl: '/partials/pins.html'
+        })
         .otherwise({
             redirectTo: '/'
         })
