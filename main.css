@@ -175,6 +175,6 @@ input:focus {
 }
 
 .selected {
-  color: firebase;
+  color: firebrick;
 }
 /* END ============================================== */
