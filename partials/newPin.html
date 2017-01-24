@@ -16,17 +16,17 @@
       <div class="clearfix"></div>
     </div>
 
+    <!-- NEW BOARD CHECKBOX -->
     <div class="form-group">
       <label class="control-label" for="checkboxBoard">New Board:</label>
       <input type="checkbox" ng-model="checkboxModel.value" aria-label="Toggle ngHide">
     </div>
 
+    <!-- BOARD DATA -->
     <div ng-hide="checkboxModel.value" class="form-group"><!-- dropdown board selection -->
       <label class="control-label" for="board">Board</label>
       <select ng-model="board.name" id="board" class="form-control" required>
-        <option>Board 1</option>
-        <option>Board 2</option>
-        <option>Board 3</option>
+        <option ng-repeat="(key, value) in board">{{value.name}}</option>
         <option disabled>──────────</option>
         <option value="">Select Board</option>
       </select>
