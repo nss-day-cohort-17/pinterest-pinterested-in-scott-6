@@ -66,8 +66,50 @@ input:focus {
 .modal-content, .modal-footer, .modal-body{
   color:black;
 }
-/* Breakpoints ====================================== */
+/* Profile ====================================== */
 
+.user-profile {
+  margin: 15% 7%;
+  color: grey;
+  font-family: 'Raleway', sans-serif;
 
+}
+
+.profile-header {
+  border-radius: 5px;
+
+}
+
+.user-boards {
+  margin: 2% 0;
+  border: 1px solid grey;
+  min-height: 400px;
+  border-radius: 5px;
+
+}
+
+.card-block {
+  padding: 2%;
+}
+
+.i-board {
+  border-radius: 5px;
+  min-height: 200px;
+  padding: 1%;
+}
+
+.i-board:hover {
+  background-color: lightgray;
+}
+
+.card-img-top {
+  height: 150px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.boards {
+  margin-top: 2%;
+}
 
 /* END ============================================== */
