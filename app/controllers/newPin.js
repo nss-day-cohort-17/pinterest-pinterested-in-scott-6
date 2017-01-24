@@ -1,27 +1,28 @@
 app.controller('NewPinCrtl', function($scope, firebaseFactory){
   //console.log("NewPinCrtl");
-  $scope.checkboxModel = { value : true };
-  // $scope.board = {};
-  // $scope.pin = {};
+  $scope.checkboxModel = { value : false };
+  $scope.newBoard = {};
+  $scope.newPin = {};
 
   // get data from firebase
   firebaseFactory.getData().then(function(val) {
-    $scope.pin = val.data.pins;
-    $scope.board = val.data.boards;
-    console.log('pin', $scope.pin);
+    $scope.pins = val.data.pins;
+    $scope.boards = val.data.boards;
+    console.log('pin', $scope.pins);
     console.log('board', $scope.boards);
   });
 
   // push data to firebase
-  $scope.addPin = function() {
+  $scope.addData = function() {
     // if new board is selected, create a board then make the pin run
     if ($scope.checkboxModel.value === true) {
-      firebaseFactory.postData($scope.board);
+      firebaseFactory.postBoard($scope.newBoard)
+        .then(firebaseFactory.postPin($scope.newPin));
     } else {
-    firebaseFactory.postData($scope.pin);
+      firebaseFactory.postPin($scope.newPin);
     }
     // reset the form
-    $scope.board = {};
-    $scope.pin = {}
+    $scope.newBoard = {};
+    $scope.newPin = {}
   }
 })
