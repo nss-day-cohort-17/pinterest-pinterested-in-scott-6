@@ -66,6 +66,14 @@ input:focus {
 .modal-content, .modal-footer, .modal-body{
   color:black;
 }
+
+.btn {
+  color: grey;
+}
+.btn:hover {
+  color: white;
+  background-color: firebrick;
+}
 /* Profile ====================================== */
 
 .user-profile {
@@ -110,6 +118,14 @@ input:focus {
 
 .boards {
   margin-top: 2%;
+}
+
+.btn-new-board {
+  background-color: white;
+  border: none;
+  height: 150px;
+  width: 100%;
+  border-radius: 5px;
 }
 
 /* END ============================================== */
