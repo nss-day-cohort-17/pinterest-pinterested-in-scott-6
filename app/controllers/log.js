@@ -1,8 +1,7 @@
 console.log('logCtrl');
-app.controller('logCtrl', function($scope){
-  // $scope.name = users.name;
-  // $scope.phone = users.phone;
-  // $scope.email = users.email;
+app.controller('logCtrl', function($scope, firebaseFactory){
+  let x = getdata();
+  console.log("firebase get data: ",x);
 })
 
 
