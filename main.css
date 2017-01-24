@@ -1,10 +1,9 @@
 /*  Team Pinterested in Scott
-Joel
-Luke
-John
+Joel Legg
+Luke Woodward
+John McCutchan
 */
 /*ALT FONT font-family: 'Work Sans', sans-serif;*/
-
 /* Structure ======================================== */
 #newPin { /* new pin form */
 padding: 1em;
@@ -13,18 +12,15 @@ padding: 1em;
 .topMarg{
   margin-top:20px;
 }
-
 /* Skin ============================================= */
 body {
   background-color: grey;
   color: white;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
 .navbar {
   padding: 1%;
 }
-
 .user-search {
   max-height: 40px;
   border-radius: 3px;
@@ -36,30 +32,24 @@ body {
   box-shadow: none;
   font-weight: bold;
 }
-
 input:focus {
   box-shadow: 0 0 5px grey;
   transition: all 0.50s ease-in-out;
   outline: none;
 }
-
 .glyphicon {
   font-size: 20px;
   color: grey;
   text-align: center;
   margin-top: 7px;
 }
-
-
 .lightgray{
   background-color:rgba(189, 195, 199,1.0);
 }
-
 #newPin { /* new pin form */
   border: 1.5px solid white;
   border-radius: 1em;
 }
-
 /* Breakpoints ====================================== */
 
 
