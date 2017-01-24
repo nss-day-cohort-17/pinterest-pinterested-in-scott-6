@@ -16,6 +16,11 @@ padding: 1em;
   display:block;
   text-align:center
 }
+.logoMin{
+  min-height:50px;
+  min-width:200px;
+  display:block;
+}
 /* Skin ============================================= */
 body {
   background-color: grey;
