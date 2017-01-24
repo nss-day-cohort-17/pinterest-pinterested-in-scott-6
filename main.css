@@ -50,6 +50,9 @@ input:focus {
   border: 1.5px solid white;
   border-radius: 1em;
 }
+.modal-content, .modal-footer, .modal-body{
+  color:black;
+}
 /* Breakpoints ====================================== */
 
 
