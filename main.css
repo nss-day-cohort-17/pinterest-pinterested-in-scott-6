@@ -17,8 +17,8 @@ John McCutchan
   text-align:center
 }
 .logoMin{
-  min-height:50px;
-  min-width:200px;
+  min-height:45px;
+  min-width:190px;
   display:block;
 }
 /* Skin ============================================= */
@@ -67,6 +67,18 @@ input:focus {
   color:black;
 }
 
+.btn {
+  color: grey;
+}
+.edit-button {
+  color: grey;
+  width: 25%;
+}
+.edit-button:hover {
+  color: white;
+  background-color: firebrick;
+}
+
 
 
 /***************************/
@@ -92,6 +104,27 @@ input:focus {
 .profile-header {
   border-radius: 5px;
 
+}
+
+.userImg {
+  height: 150px;
+  border-radius: 50%;
+  border: 15px solid lightgray;
+}
+
+.marg {
+  margin: 2% 0;
+}
+
+.board-pin-tog {
+  text-align: center;
+  color: grey;
+  font-size: 1.5em;
+}
+
+.board-pin-tog:hover {
+  color: firebrick;
+  text-decoration: none;
 }
 
 .user-boards {
@@ -120,11 +153,28 @@ input:focus {
 .card-img-top {
   height: 150px;
   width: 100%;
+  margin: 0 0 3px 0;
   border-radius: 5px;
+}
+
+.card-title {
+
+  margin-top: 7px;
 }
 
 .boards {
   margin-top: 2%;
 }
 
+.btn-new-board {
+  background-color: white;
+  border: none;
+  height: 150px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.selected {
+  color: firebase;
+}
 /* END ============================================== */
