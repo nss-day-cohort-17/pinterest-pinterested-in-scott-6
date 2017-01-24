@@ -70,7 +70,11 @@ input:focus {
 .btn {
   color: grey;
 }
-.btn:hover {
+.edit-button {
+  color: grey;
+  width: 25%;
+}
+.edit-button:hover {
   color: white;
   background-color: firebrick;
 }
@@ -86,6 +90,23 @@ input:focus {
 .profile-header {
   border-radius: 5px;
 
+}
+
+.marg {
+  margin: 2% 0;
+}
+
+.board-pin-tog {
+  text-align: center;
+  color: grey;
+  font-size: 1.5em;
+}
+
+.board-pin-tog:hover {
+  background-color: lightgray;
+  border-radius: 10px;
+  color: grey;
+  text-decoration: none;
 }
 
 .user-boards {
@@ -113,7 +134,13 @@ input:focus {
 .card-img-top {
   height: 150px;
   width: 100%;
+  margin: 0 0 3px 0;
   border-radius: 5px;
+}
+
+.card-title {
+
+  margin-top: 7px;
 }
 
 .boards {
