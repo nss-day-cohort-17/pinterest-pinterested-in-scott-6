@@ -12,6 +12,10 @@ padding: 1em;
 .topMarg{
   margin-top:20px;
 }
+.center{
+  display:block;
+  text-align:center
+}
 /* Skin ============================================= */
 body {
   background-color: grey;
