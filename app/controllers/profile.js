@@ -1,8 +1,8 @@
-console.log('ProfileCrtl');
-app.controller('ProfileCrtl', function($scope){
-    $scope.userSearch = () => {
-      console.log("hey");
-    }
+app.controller('ProfileCrtl', function($scope, firebaseFactory){
+    firebaseFactory.getData().then((val)=>{
+      console.log(val.data.users);
+      $scope.user = val.data.users
+    })
 })
 
 //$http, $routeParams
