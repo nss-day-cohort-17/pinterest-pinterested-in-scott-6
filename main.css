@@ -1,0 +1,165 @@
+/*  Team Pinterested in Scott
+Joel Legg
+Luke Woodward
+John McCutchan
+*/
+/*ALT FONT font-family: 'Work Sans', sans-serif;*/
+/* Structure ======================================== */
+#newPin { /* new pin form */
+padding: 1em;
+  margin-top: 2em;
+}
+.topMarg{
+  margin-top:20px;
+}
+.center{
+  display:block;
+  text-align:center
+}
+.logoMin{
+  min-height:45px;
+  min-width:190px;
+  display:block;
+}
+/* Skin ============================================= */
+body {
+  background-color: white;
+  color: grey;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.navbar {
+  padding: 1%;
+}
+.user-search {
+  max-height: 40px;
+  border-radius: 3px;
+  width: 100%;
+  background-color: lightgrey;
+  padding: 2% 2.2% 2.3%;
+  font-size: 2em;
+  border: none;
+  box-shadow: none;
+  font-weight: bold;
+}
+input:focus {
+  box-shadow: 0 0 5px grey;
+  transition: all 0.50s ease-in-out;
+  outline: none;
+}
+.glyphicon {
+  font-size: 20px;
+  color: grey;
+  text-align: center;
+  margin-top: 7px;
+}
+.glyphicon:hover {
+  color: firebrick;
+}
+
+.lightgray{
+  background-color:rgba(189, 195, 199,1.0);
+}
+#newPin { /* new pin form */
+  border: 1.5px solid grey;
+  border-radius: 1em;
+}
+.modal-content, .modal-footer, .modal-body{
+  color:black;
+}
+
+.btn {
+  color: grey;
+}
+.edit-button {
+  color: grey;
+  width: 25%;
+}
+.edit-button:hover {
+  color: white;
+  background-color: firebrick;
+}
+/* Profile ====================================== */
+
+.user-profile {
+  margin: 15% 7%;
+  color: grey;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+.profile-header {
+  border-radius: 5px;
+
+}
+
+.userImg {
+  height: 150px;
+  border-radius: 50%;
+  border: 15px solid lightgray;
+}
+
+.marg {
+  margin: 2% 0;
+}
+
+.board-pin-tog {
+  text-align: center;
+  color: grey;
+  font-size: 1.5em;
+}
+
+.board-pin-tog:hover {
+  color: firebrick;
+  text-decoration: none;
+}
+
+.user-boards {
+  margin: 2% 0;
+  border: 1px solid grey;
+  min-height: 400px;
+  border-radius: 5px;
+
+}
+
+.card-block {
+  padding: 2%;
+}
+
+.i-board {
+  border-radius: 5px;
+  min-height: 200px;
+  padding: 1%;
+}
+
+.i-board:hover {
+  background-color: lightgray;
+}
+
+.card-img-top {
+  height: 150px;
+  width: 100%;
+  margin: 0 0 3px 0;
+  border-radius: 5px;
+}
+
+.card-title {
+
+  margin-top: 7px;
+}
+
+.boards {
+  margin-top: 2%;
+}
+
+.btn-new-board {
+  background-color: white;
+  border: none;
+  height: 150px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.selected {
+  color: firebase;
+}
+/* END ============================================== */
