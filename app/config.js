@@ -1,15 +1,17 @@
-app.config(function($routeProvider){
+app.config(function($routeProvider, $locationProvider){
+$locationProvider.hashPrefix('!');
 
-        $routeProvider
-            .when('/profile', {
-                controller: 'ProfileCrtl',
-                templateUrl: 'partials/profile.html'
-            }).when('/newpin', {
-                controller: 'NewPinCrtl',
-                templateUrl: '/partials/newPin.html'
-            })
-            .otherwise({
-                redirectTo: '/profile'
-            })
+    $routeProvider
+        .when('/', {
+            controller: 'ProfileCrtl',
+            templateUrl: 'partials/profile.html'
+        })
+        .when('/newpin', {
+            controller: 'NewPinCrtl',
+            templateUrl: '/partials/newPin.html'
+        })
+        .otherwise({
+            redirectTo: '/'
+        })
 
 })
