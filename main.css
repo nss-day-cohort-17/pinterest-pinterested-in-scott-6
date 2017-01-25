@@ -95,7 +95,7 @@ input:focus {
 /* Profile ====================================== */
 
 .user-profile {
-  margin: 15% 7%;
+  margin: 10% 7%;
   color: grey;
   font-family: 'Raleway', sans-serif;
 
@@ -103,6 +103,7 @@ input:focus {
 
 .profile-header {
   border-radius: 5px;
+  text-align: center;
 
 }
 
@@ -176,5 +177,12 @@ input:focus {
 
 .selected {
   color: firebrick;
+  text-decoration: none;
+}
+
+.selected:visited {
+  color: firebrick;
+  text-decoration: none;
+
 }
 /* END ============================================== */

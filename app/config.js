@@ -11,7 +11,7 @@ $locationProvider.hashPrefix('!');
             templateUrl: '/partials/newPin.html'
         })
         .when('/pins', {
-            controller: 'PinsCtrls',
+            controller: 'PinsCtrl',
             templateUrl: '/partials/pins.html'
         })
         .otherwise({
