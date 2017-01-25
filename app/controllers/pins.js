@@ -4,5 +4,5 @@ app.controller('PinsCtrl', function($scope, firebaseFactory){
       $scope.pins = val.data.pins
     })
 
-    
+
 })
