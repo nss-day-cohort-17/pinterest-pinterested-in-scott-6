@@ -53,7 +53,7 @@ input:focus {
   margin-top: 7px;
 }
 .glyphicon:hover {
-  color: firebrick;
+  color: #C92228;
 }
 
 .lightgray{
@@ -76,7 +76,7 @@ input:focus {
 }
 .edit-button:hover {
   color: white;
-  background-color: firebrick;
+  background-color: #C92228;
 }
 
 
@@ -124,7 +124,7 @@ input:focus {
 }
 
 .board-pin-tog:hover {
-  color: firebrick;
+  color: #C92228;
   text-decoration: none;
 }
 
@@ -169,19 +169,19 @@ input:focus {
 
 .btn-new-board {
   background-color: white;
-  border: none;
+  border: 1px solid #C92228;
   height: 150px;
   width: 100%;
   border-radius: 5px;
 }
 
 .selected {
-  color: firebrick;
+  color: #C92228;
   text-decoration: none;
 }
 
 .selected:visited {
-  color: firebrick;
+  color: #C92228;
   text-decoration: none;
 
 }
