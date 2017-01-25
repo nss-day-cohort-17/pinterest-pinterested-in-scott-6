@@ -25,10 +25,11 @@ John McCutchan
 body {
   background-color: white;
   color: grey;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 .navbar {
   padding: 1%;
+  font-family: 'Raleway', sans-serif;
+
 }
 .user-search {
   max-height: 40px;
@@ -98,7 +99,6 @@ input:focus {
   margin: 10% 7%;
   color: grey;
   font-family: 'Raleway', sans-serif;
-
 }
 
 .profile-header {
@@ -150,8 +150,7 @@ stylize any heading tags withing white-panel below
 
 
 .i-board {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
   border-radius: 4px;
   min-height: 200px;
   padding: 1%;
