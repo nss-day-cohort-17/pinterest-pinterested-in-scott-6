@@ -3,6 +3,8 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory){
       console.log(val.data.boards);
       $scope.boards = val.data.boards
     })
+
 })
+
 
 //$http, $routeParams
