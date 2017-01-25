@@ -31,9 +31,9 @@
           <hr>
           <div>
             <label for="">Email</label><br>
-            <input type="email" size="35"><br>
+            <input ng-model="$scope.email" type="email" size="35"><br>
             <label for="">Password</label><br>
-            <input type="password" size="35"><br>
+            <input ng-model="$scope.password" type="password" size="35"><br>
             <a class="btn btn-primary topMarg" href="#">Submit</a>
           </div>
         </div><!-- / .col-md-3 -->
@@ -55,15 +55,15 @@
               </div> <!-- / .modal-header -->
               <div class="modal-body">
                 <label for="email">Email:</label><br>
-                <input type="email" size="35" required><br>
+                <input type="email" size="35" ng-model="$scope.email" required><br>
                 <label for="firstName">First Name:</label><br>
-                <input type="text" name="firstName" size="35" required><br>
+                <input type="text" name="firstName" size="35"><br>
                 <label for="firstName">Last Name:</label><br>
-                <input type="text" name="lastName" size="35" required><br>
+                <input type="text" name="lastName" size="35"><br>
                 <label for="password">Password: </label><br>
                 <input type="text" size="35" required><br>
                 <label for="password">Password (Re-type/must match): </label><br>
-                <input type="text" size="35" required>
+                <input ng-model="$scope.password" type="text" size="35" required>
               </div> <!-- / .modal-body -->
               <div class="modal-footer">
                 <button type="button" class="btn btn-default"><a href="main.html" class="btn btn-danger">Enter</a></button>

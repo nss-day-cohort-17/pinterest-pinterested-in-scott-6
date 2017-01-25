@@ -1,6 +1,9 @@
-
-console.log('logCtrl');
-app.controller('logCtrl', function(firebaseFactory, $scope) {
+app.controller('LogCtrl', function($scope, authFacotry){
+  $scope.login = () => {
+    authFactory.login($scope.email, $scope.password)
+    console.log('login: ',$scope.email, $scope.password)
+      .then(() => {
+        $location.url('/')
+      })
+  }
 })
-
-//ng-include
