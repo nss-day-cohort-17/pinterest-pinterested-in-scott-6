@@ -25,7 +25,7 @@
     <!-- EXISTING BOARDS -->
     <div ng-hide="checkboxModel.value" class="form-group">
       <label class="control-label">Board</label>
-      <select ng-model="newBoard.name" class="form-control" ng-required="checkboxModel.value">
+      <select ng-model="newPin.boardKey" class="form-control" ng-required="checkboxModel.value">
         <option ng-repeat="(key, value) in boards" value={{key}}>{{value.name}}, {{key}}</option>
         <option disabled>──────────</option>
         <option value="">Select Board</option>
