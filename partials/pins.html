@@ -36,14 +36,14 @@
     <!-- BOARDS -->
     <div class="board row" id="pinBoot">
 
-      <div class="i-board col-xs-3">
+      <div class="i-pin col-xs-3">
         <button type="button" class="btn-new-board"><span class="glyphicon glyphicon-plus"></span></button>
         <div class="card-block row">
           <h4 class="card-title col-xs-12">Save Pin</h4>
         </div>
       </div>
 
-      <div class="i-board col-xs-3" ng-repeat="(k, v) in pins">
+      <div class="i-pin col-xs-3" ng-repeat="(k, v) in pins">
         <img class="card-img-top" src="{{v.imageURL}}" alt="Card image cap">
         <div class="card-block row">
           <h4 class="card-title col-xs-8">{{v.title}}</h4>
