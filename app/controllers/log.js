@@ -1,8 +1,9 @@
 console.log('logCtrl');
-app.controller('logCtrl', function($scope, firebaseFactory){
-  let x = getdata();
-  console.log("firebase get data: ",x);
-})
-
+app.controller('logCtrl', function(firebaseFactory, ['$scope', function($scope) {
+  $scope.example = {
+    text: 'guest',
+    word: /^\s*\w*\s*$/
+  };
+}]);
 
 //ng-include
