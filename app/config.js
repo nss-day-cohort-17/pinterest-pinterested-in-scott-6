@@ -6,20 +6,35 @@ $locationProvider.hashPrefix('!');
         databaseURL: "https://pinterested-in-scott-pins.firebaseio.com",
         storageBucket: "pinterested-in-scott-pins.appspot.com",
         messagingSenderId: "293020506124"
-    });
+    })
+
+    const checkForAuth = {
+      checkForAuth ($location) {
+        // http://stackoverflow.com/questions/37370224/firebase-stop-listening-onauthstatechanged
+        const authReady = firebase.auth().onAuthStateChanged(user => {
+          authReady()
+          if (!user) {
+            $location.url('/')
+          }
+        })
+      }
+    }
 
     $routeProvider
         .when('/', {
             controller: 'ProfileCrtl',
-            templateUrl: 'partials/profile.html'
+            templateUrl: 'partials/profile.html',
+            //resolve: checkForAuth
         })
         .when('/newpin', {
             controller: 'NewPinCrtl',
-            templateUrl: '/partials/newPin.html'
+            templateUrl: '/partials/newPin.html',
+            //resolve: checkForAuth
         })
         .when('/pins', {
             controller: 'PinsCtrl',
-            templateUrl: '/partials/pins.html'
+            templateUrl: '/partials/pins.html',
+            //resolve: checkForAuth
         })
         .otherwise({
             redirectTo: '/'
