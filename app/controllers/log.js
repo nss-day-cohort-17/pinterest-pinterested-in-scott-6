@@ -1,7 +1,6 @@
-app.controller('logCtrl', function($scope, firebaseFactory){
-  let x = getdata();
-  console.log("firebase get data: ",x);
-})
 
+console.log('logCtrl');
+app.controller('logCtrl', function(firebaseFactory, $scope) {
+})
 
 //ng-include
