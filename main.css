@@ -141,6 +141,8 @@ input:focus {
 }
 
 .i-board {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   border-radius: 5px;
   min-height: 200px;
   padding: 1%;
@@ -150,14 +152,7 @@ input:focus {
   background-color: lightgray;
 }
 
-.card-img-top {
-  width: 100%;
-  margin: 0 0 3px 0;
-  border-radius: 5px;
-}
-
 .card-title {
-
   margin-top: 7px;
 }
 
@@ -183,4 +178,35 @@ input:focus {
   text-decoration: none;
 
 }
+
+/*----------- IMPORTED ----------*/
+#pinBoot {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+.white-panel {
+  position: absolute;
+  background: white;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+}
+/*
+stylize any heading tags withing white-panel below
+*/
+
+.white-panel:hover {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  margin-top: -5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 /* END ============================================== */

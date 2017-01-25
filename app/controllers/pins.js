@@ -3,4 +3,6 @@ app.controller('PinsCtrl', function($scope, firebaseFactory){
       console.log(val.data.users);
       $scope.pins = val.data.pins
     })
+
+    
 })
