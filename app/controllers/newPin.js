@@ -19,17 +19,19 @@ app.controller('NewPinCrtl', function($scope, firebaseFactory){
   $scope.addData = function() {
     // if new board is selected, create a board then make the pin run
     if ($scope.checkboxModel.value === true) {
-      console.log('make new board')
-    //   firebaseFactory.postBoard($scope.newBoard)
-    //     // then get the board key from firebase and apply it to the newPin
-    //     .then(firebaseFactory.getData()
-    //       .then(function(val) {
-    //         $scope.boards = val.data.boards
-    //       }))
-    //     .then(firebaseFactory.postPin($scope.newPin));
+      // console.log('make new board')
+      firebaseFactory
+        .postBoard($scope.newBoard)
+        // then get the board key from firebase and apply it to the newPin
+        .then(function(response) {
+          // console.log('response key', response.data.name);
+          $scope.newPin.boardKey = response.data.name;
+          // console.log("newPin boardKey", $scope.newPin.boardKey)
+        })
+        .then(firebaseFactory.postPin($scope.newPin));
     }
     else {
-      console.log("use old board")
+      // console.log("use old board")
       firebaseFactory.postPin($scope.newPin);
     }
     // reset the form
