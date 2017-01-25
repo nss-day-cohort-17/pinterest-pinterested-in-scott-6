@@ -3,7 +3,6 @@ Joel Legg
 Luke Woodward
 John McCutchan
 */
-/*ALT FONT font-family: 'Work Sans', sans-serif;*/
 /* Structure ======================================== */
 #newPin { /* new pin form */
   padding: 1em;
@@ -148,15 +147,27 @@ input:focus {
 stylize any heading tags withing white-panel below
 */
 
-
 .i-board {
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 4px;
+  min-height: 200px;
+  padding: 1%;
+
+}
+
+.i-board:hover {
+  background-color: lightgray;
+
+}
+
+.i-pin {
   font-family: 'Open Sans', sans-serif;
   border-radius: 4px;
   min-height: 200px;
   padding: 1%;
 }
 
-.i-board:hover {
+.i-pin:hover {
   background-color: lightgray;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
   margin-top: -5px;
@@ -165,7 +176,6 @@ stylize any heading tags withing white-panel below
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
 
 .card-title {
   margin-top: 7px;
