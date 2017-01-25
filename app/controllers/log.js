@@ -1,9 +1,5 @@
 console.log('logCtrl');
-app.controller('logCtrl', function(firebaseFactory, ['$scope', function($scope) {
-  $scope.example = {
-    text: 'guest',
-    word: /^\s*\w*\s*$/
-  };
-}]);
+app.controller('logCtrl', function(firebaseFactory, $scope) {
+})
 
 //ng-include
