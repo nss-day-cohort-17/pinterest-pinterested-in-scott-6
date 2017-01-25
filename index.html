@@ -21,7 +21,7 @@
 
   <body ng-app="pinApp" class="lightgray">
 
-    <div ng-controller="logCtrl" class="container">
+    <div ng-controller='logCtrl' class="container">
       <div class="row">
         <div class="col-md-12 text-center">
           <img src="/images/logo.png" alt="Pinterested in Scott"></div>
@@ -29,13 +29,13 @@
         <div class="col-md-3">
           <h1>Login</h1>
           <hr>
-          <div>
+          <form ng-submit="login()">
             <label for="">Email</label><br>
-            <input ng-model="$scope.email" type="email" size="35"><br>
+            <input ng-model="email" type="email" size="35"><br>
             <label for="">Password</label><br>
-            <input ng-model="$scope.password" type="password" size="35"><br>
-            <a class="btn btn-primary topMarg" href="#">Submit</a>
-          </div>
+            <input ng-model="password" type="password" size="35"><br>
+            <button type="submit" class="btn btn-primary topMarg">Submit</button>
+          </form>
         </div><!-- / .col-md-3 -->
         <div class="col-md-3">
           <div>
@@ -53,7 +53,7 @@
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                 <h4 class="modal-title">Registration</h4>
               </div> <!-- / .modal-header -->
-              <div class="modal-body">
+              <form class="modal-body">
                 <label for="email">Email:</label><br>
                 <input type="email" size="35" ng-model="$scope.email" required><br>
                 <label for="firstName">First Name:</label><br>
@@ -64,7 +64,7 @@
                 <input type="text" size="35" required><br>
                 <label for="password">Password (Re-type/must match): </label><br>
                 <input ng-model="$scope.password" type="text" size="35" required>
-              </div> <!-- / .modal-body -->
+              </form> <!-- / .modal-body -->
               <div class="modal-footer">
                 <button type="button" class="btn btn-default"><a href="main.html" class="btn btn-danger">Enter</a></button>
               </div> <!-- / .modal-footer -->

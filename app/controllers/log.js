@@ -1,9 +1,6 @@
-app.controller('LogCtrl', function($scope, authFacotry){
-  $scope.login = () => {
-    authFactory.login($scope.email, $scope.password)
-    console.log('login: ',$scope.email, $scope.password)
-      .then(() => {
-        $location.url('/')
-      })
-  }
+app.controller('logCtrl', function($scope, authFactory, $location){
+  console.log('login Ctrl fired')
+  $scope.login = () => authFactory
+    .login($scope.email, $scope.password)
+    .then(() => $location.url('/main.html'))
 })
