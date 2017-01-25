@@ -6,7 +6,7 @@
 
     <div class="form-group"> <!-- Url field -->
       <label class="control-label " for="subject">Address</label>
-      <input ng-model="newPin.addressURL" class="form-control"  name="subject" type="text" placeholder="Website URL" required/>
+      <input ng-model="newPin.webAddress" class="form-control"  name="subject" type="text" placeholder="Website URL" required/>
       <div class="clearfix"></div>
     </div>
 
@@ -18,15 +18,15 @@
 
     <!-- NEW BOARD CHECKBOX -->
     <div class="form-group">
-      <label class="control-label" for="checkboxBoard">New Board:</label>
-      <input type="checkbox" ng-model="checkboxModel.value" aria-label="Toggle ngHide">
+      <label class="control-label" for="checkboxModel.value">New Board:</label>
+      <input type="checkbox" ng-model="checkboxModel.value" id="checkboxModel.value" aria-label="Toggle ngHide">
     </div>
 
-    <!-- BOARD DATA -->
-    <div ng-hide="checkboxModel.value" class="form-group"><!-- dropdown board selection -->
-      <label class="control-label" for="board">Board</label>
-      <select ng-model="newBoard.name" id="board" class="form-control" required>
-        <option ng-repeat="(key, value) in boards">{{value.name}}</option>
+    <!-- EXISTING BOARDS -->
+    <div ng-hide="checkboxModel.value" class="form-group">
+      <label class="control-label">Board</label>
+      <select ng-model="newPin.boardKey" class="form-control" ng-required="!checkboxModel.value">
+        <option ng-repeat="(key, value) in boards" value={{key}}>{{value.name}}</option>
         <option disabled>──────────</option>
         <option value="">Select Board</option>
       </select>
@@ -35,12 +35,12 @@
     <!-- NEW BOARD -->
     <div ng-show="checkboxModel.value" class="form-group"> <!-- Board field -->
       <label class="control-label " for="subject">Board</label>
-      <input ng-model="newBoard.name" class="form-control" name="subject" type="text" placeholder="Title" required/>
+      <input ng-model="newBoard.name" class="form-control" name="subject" type="text" placeholder="Title" ng-required="checkboxModel.value" />
     </div>
 
     <div ng-show="checkboxModel.value" class="form-group"> <!-- Title field -->
       <label class="control-label " for="Comment">Board Description</label>
-      <textarea ng-model="newBoard.description" class="form-control" cols="40" name="message" rows="5"  placeholder="Board description..." required></textarea>
+      <textarea ng-model="newBoard.description" class="form-control" cols="40" name="message" rows="5"  placeholder="Board description..." ng-required="checkboxModel.value"></textarea>
     </div>
     <!-- END NEW BOARD -->
 
@@ -55,7 +55,8 @@
       <textarea ng-model="newPin.comment" class="form-control" cols="40" name="message" rows="5"  placeholder="Comment" required></textarea>
       <div class="clearfix"></div>
     </div>
-
+    <div>Form is {{newlyPinned.$valid}} </div>
+    <div>checkbox value is {{checkboxModel.value}}</div>
     <div class="form-group">
       <button class="btn btn-danger " name="submit" type="submit">Submit</button>
     </div>
