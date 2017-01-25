@@ -8,8 +8,8 @@ app.controller('NewPinCrtl', function($scope, firebaseFactory){
   firebaseFactory.getData().then(function(val) {
     $scope.pins = val.data.pins;
     $scope.boards = val.data.boards;
-    console.log('pin', $scope.pins);
-    console.log('board', $scope.boards);
+    // console.log('pin', $scope.pins);
+    // console.log('board', $scope.boards);
   });
 
   $scope.addKey = function(key) {
@@ -30,8 +30,8 @@ app.controller('NewPinCrtl', function($scope, firebaseFactory){
         })
         .then(firebaseFactory.postPin($scope.newPin));
     }
+    // if user selects existing board the just add the pin with preexisting board key
     else {
-      // console.log("use old board")
       firebaseFactory.postPin($scope.newPin);
     }
     // reset the form
