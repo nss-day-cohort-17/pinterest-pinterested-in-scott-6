@@ -1,6 +1,6 @@
 app.controller('NewPinCrtl', function($scope, firebaseFactory){
   //console.log("NewPinCrtl");
-  $scope.checkboxModel = { value : false };
+  $scope.checkboxChecked = false;
   $scope.newBoard = {};
   $scope.newPin = {};
 
@@ -18,7 +18,7 @@ app.controller('NewPinCrtl', function($scope, firebaseFactory){
   // push data to firebase
   $scope.addData = function() {
     // if new board is selected, create a board then make the pin run
-    if ($scope.checkboxModel.value === true) {
+    if ($scope.checkboxChecked === true) {
       // console.log('make new board')
       firebaseFactory
         .postBoard($scope.newBoard)
@@ -29,6 +29,7 @@ app.controller('NewPinCrtl', function($scope, firebaseFactory){
           // console.log("newPin boardKey", $scope.newPin.boardKey)
         })
         .then(firebaseFactory.postPin($scope.newPin));
+        // then navigate to the pins page
     }
     // if user selects existing board the just add the pin with preexisting board key
     else {
