@@ -17,5 +17,5 @@ $locationProvider.hashPrefix('!');
         .otherwise({
             redirectTo: '/'
         })
-
+        
 })
