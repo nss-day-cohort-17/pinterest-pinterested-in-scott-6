@@ -12,14 +12,11 @@ app.controller('NewPinCrtl', function($scope, firebaseFactory, pinFactory){
     // console.log('board', $scope.boards);
   });
 
-  $scope.addKey = function(key) {
-    console.log('key', key)
-  }
   // push data to firebase
   $scope.addData = function() {
     // if new board is selected, create a board then make the pin run
     if ($scope.checkboxChecked === true) {
-      // console.log('make new board')
+      console.log('make new board')
       firebaseFactory
         .postBoard($scope.newBoard)
         // then get the board key from firebase and apply it to the newPin

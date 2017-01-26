@@ -9,10 +9,21 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
       $scope.pins = pins.data;
     })
 
+    // var obj = {a:1, b:2, c:3};
+
+    // for (var prop in obj) {
+    //   console.log('obj.' + prop, '=', obj[prop]);
+    // }
+
+    // Output:
+    // "obj.a = 1"
+    // "obj.b = 2"
+    // "obj.c = 3"
+
     $scope.logout = () => authFactory
     .logout()
     .then(() => $location.path('/'))
-
+  
 })
 
 
