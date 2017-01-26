@@ -8,9 +8,11 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
       console.log('pins from profile', pins.data)
       $scope.pins = pins.data;
     })
+
     $scope.logout = () => authFactory
     .logout()
     //.then(() => $location.path('index.html'))
+
 })
 
 
