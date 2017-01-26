@@ -22,6 +22,11 @@ $locationProvider.hashPrefix('!');
 
     $routeProvider
         .when('/', {
+            controller: 'logCtrl',
+            templateUrl: 'partials/login.html',
+            //resolve: checkForAuth
+        })
+        .when('/profile', {
             controller: 'ProfileCrtl',
             templateUrl: 'partials/profile.html',
             //resolve: checkForAuth
