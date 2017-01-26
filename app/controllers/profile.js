@@ -28,7 +28,7 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
     .logout()
     .then(() => $location.path('/'))
 
-
+    //passing data from board to modal so that data can be used for the $http methods
     $scope.dispModel = (name, dscrptn, k) => {
         $scope.boardName = name;
         $scope.boardDscrptn = dscrptn;
@@ -40,7 +40,12 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
 
       boardFactory.postBoard($scope.newBoard)
       .then($scope.newBoard = {})
+      //take you to your new board .then(() => $location.path('/'))
+    }
 
+    // Edits board through patch $http.method
+    $scope.patchEdits = function(k) {
+      boardFactory.patchBoard(k, $scope.newBoard)
     }
 
     // Deletes new board from edit model
