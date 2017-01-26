@@ -48,8 +48,8 @@
         <!-- image collage for the board -->
         <!-- image from pin with matching boardKey -->
           <div class="flexcontainer">
-            <div class="setSize" ng-repeat="(k, v) in pins">
-              <img class="boardImages" src="{{v.imageURL}}" alt="" />
+            <div class="setSize" ng-repeat="(key, value) in pins">
+              <img ng-if="k === value.boardKey " class="boardImages" src="{{value.imageURL}}" alt="" />
             </div>
           </div>
 

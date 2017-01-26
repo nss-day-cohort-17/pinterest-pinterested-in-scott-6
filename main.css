@@ -152,7 +152,7 @@ stylize any heading tags withing white-panel below
   border-radius: 4px;
   min-height: 200px;
   padding: 1%;
-
+  width: 290px;
 }
 
 .i-board:hover {
@@ -187,10 +187,19 @@ stylize any heading tags withing white-panel below
 
 .btn-new-board {
   background-color: white;
+  /*border: 1px solid #C92228;
+  height: 152px;
+  width: 270px;
+  border-radius: 5px;*/
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
   border: 1px solid #C92228;
-  height: 150px;
-  width: 100%;
-  border-radius: 5px;
+  /*border-radius: 0.5em;*/
+  width: 257px;
+  height: 152px;
+  /*overflow: hidden;*/
+  margin: 0.2em 0.7em;
+  text-align: center;
 }
 
 .selected {
@@ -208,20 +217,21 @@ stylize any heading tags withing white-panel below
 .flexcontainer {
   display: flex;
   flex-wrap: wrap;
-  border: 2px solid black;
-  width: 184px;
-  height: 124px;
+  border: 1px solid #C92228;
+  /*border-radius: 0.5em;*/
+  width: 227px;
+  height: 152px;
   overflow: hidden;
   margin: 0.2em auto;
 }
 .setSize {
   display: flex;
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
 /*   overflow: hidden; */
 }
 .boardImages {
-  width: 60px;
+  width: 75px;
   border-radius: 0;
 }
 
