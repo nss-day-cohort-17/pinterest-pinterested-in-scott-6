@@ -11,7 +11,7 @@ app.factory('authFactory', ($q) => {
     registerUser(email, pass) {
       console.log('Sent to Firebase: ', email, pass)
       return $q.resolve(firebase.auth().createUserWithEmailAndPassword( email, pass).then(console.log))
-    }
+    },
     logout(){
       return firebase.auth().signOut()
     }

@@ -204,6 +204,27 @@ stylize any heading tags withing white-panel below
 
 }
 
+/*---------BOARD IMAGE COLLAGE----------*/
+.flexcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  width: 184px;
+  height: 124px;
+  overflow: hidden;
+  margin: 0.2em auto;
+}
+.setSize {
+  display: flex;
+  width: 60px;
+  height: 60px;
+/*   overflow: hidden; */
+}
+.boardImages {
+  width: 60px;
+  border-radius: 0;
+}
+
 /*----------- IMPORTED ----------*/
 #pinBoot {
   position: relative;
