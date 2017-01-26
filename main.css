@@ -219,8 +219,7 @@ stylize any heading tags withing white-panel below
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /*border: 1px solid #C92228;*/
-  border-radius: 8px;
+  border: 1px solid #C92228;
   width: 227px;
   height: 152px;
   overflow: hidden;
