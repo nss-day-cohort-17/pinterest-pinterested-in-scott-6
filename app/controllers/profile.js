@@ -1,8 +1,12 @@
-app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, authFactory, $location){
+app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, authFactory, boardFactory, $location){
+
+    $scope.newBoard = {};
+
     $scope.numLimit = 2;
     firebaseFactory.getData().then((val)=>{
       //console.log(val.data.boards);
       $scope.boards = val.data.boards
+      console.log($scope.boards);
     })
     pinFactory.getPins().then((pins)=> {
       console.log('pins from profile', pins.data)
@@ -24,10 +28,30 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
     .logout()
     .then(() => $location.path('/'))
 
-
-    $scope.dispModel = (a) => {
-        $scope.currentBoardModel = a
+    //passing data from board to modal so that data can be used for the $http methods
+    $scope.dispModel = (name, dscrptn, k) => {
+        $scope.boardName = name;
+        $scope.boardDscrptn = dscrptn;
+        $scope.key = k;
     };
+
+    // Create new board from profile page
+    $scope.createBoard = function() {
+
+      boardFactory.postBoard($scope.newBoard)
+      .then($scope.newBoard = {})
+      //take you to your new board .then(() => $location.path('/'))
+    }
+
+    // Edits board through patch $http.method
+    $scope.patchEdits = function(k) {
+      boardFactory.patchBoard(k, $scope.newBoard)
+    }
+
+    // Deletes new board from edit model
+    $scope.deleteBoard = function(k) {
+      boardFactory.deleteBoard(k)
+    }
 
 })
 
