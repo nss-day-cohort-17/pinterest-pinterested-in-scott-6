@@ -48,8 +48,8 @@
       <div class="i-board col-sm-4" ng-repeat="(k, v) in boards">
 
         <div class="flexcontainer">
-          <div class="setSize" ng-repeat="(key, value) in pins" ng-if="k == value.boardKey">
-            <img class="boardImages" ng-src="{{value.imageURL}}" alt="" />
+          <div class="setSize" ng-repeat="(key, value) in boardPictures" ng-if="k === key">
+            <img class="boardImages" ng-src="{{value}}" alt="" />
           </div>
         </div>
 
