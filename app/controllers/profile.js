@@ -1,8 +1,12 @@
-app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, authFactory, $location){
+app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, authFactory, boardFactory, $location){
+
+    $scope.newBoard = {};
+
     $scope.numLimit = 2;
     firebaseFactory.getData().then((val)=>{
       //console.log(val.data.boards);
       $scope.boards = val.data.boards
+      console.log($scope.boards);
     })
     pinFactory.getPins().then((pins)=> {
       console.log('pins from profile', pins.data)
@@ -25,9 +29,16 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
     .then(() => $location.path('/'))
 
 
-    $scope.dispModel = (a) => {
-        $scope.currentBoardModel = a
+    $scope.dispModel = (name, dscrptn) => {
+        $scope.boardname = name;
+        $scope.boardDscrptn = dscrptn;
     };
+
+
+    $scope.createBoard = function() {
+      
+      boardFactory.postBoard($scope.newBoard)
+    }
 
 })
 
