@@ -13,7 +13,8 @@ app.factory('authFactory', ($q) => {
       return $q.resolve(firebase.auth().createUserWithEmailAndPassword( email, pass).then(console.log))
     },
     logout(){
-      return firebase.auth().signOut()
+      console.log('Logged Out')
+      return $q.resolve(firebase.auth().signOut())
     }
   }
 })
