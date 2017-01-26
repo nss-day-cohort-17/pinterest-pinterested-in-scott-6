@@ -45,7 +45,14 @@
       </div>
 
       <div class="i-board col-sm-4" ng-repeat="(k, v) in boards">
-        <img class="card-img-top" src="http://bluebirdc.dk/wp-content/uploads/2013/06/drone-shot-1.jpg" alt="Card image cap">
+        <!-- image collage for the board -->
+        <!-- image from pin with matching boardKey -->
+          <div class="flexcontainer">
+            <div class="setSize" ng-repeat="(k, v) in pins">
+              <img class="boardImages" src="{{v.imageURL}}" alt="" />
+            </div>
+          </div>
+
         <div class="card-block row">
           <h4 class="card-title col-xs-8">{{v.name}}</h4>
           <a href="#" class="btn edit-button col-xs-3">Edit</a>
