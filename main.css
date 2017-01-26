@@ -214,6 +214,7 @@ stylize any heading tags withing white-panel below
 }
 
 /*---------BOARD IMAGE COLLAGE----------*/
+
 .flexcontainer {
   display: flex;
   flex-wrap: wrap;
@@ -224,14 +225,15 @@ stylize any heading tags withing white-panel below
   height: 152px;
   overflow: hidden;
   margin: 0.2em auto;
-
 }
+
 .setSize {
   display: flex;
   width: 75px;
   height: 75px;
 /*   overflow: hidden; */
 }
+
 .boardImages {
   width: 75px;
   border-radius: 0;

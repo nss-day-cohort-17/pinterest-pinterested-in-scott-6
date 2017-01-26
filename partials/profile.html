@@ -118,7 +118,7 @@
       <!-- ITERATED BOARDS -->
       <div class="i-board col-sm-4" ng-repeat="(k, v) in boards">
 
-        <div class="flexcontainer">
+        <div class="flexcontainer" ng-click="log()">
           <div class="setSize" ng-repeat="(key, value) in pins" ng-if="k == value.boardKey">
             <img class="boardImages" ng-src="{{value.imageURL}}" alt="" />
           </div>

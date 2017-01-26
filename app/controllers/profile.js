@@ -46,12 +46,20 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
     // Edits board through patch $http.method
     $scope.patchEdits = function(k) {
       boardFactory.patchBoard(k, $scope.newBoard)
+      .then($scope.newBoard = {})
     }
 
     // Deletes new board from edit model
     $scope.deleteBoard = function(k) {
       boardFactory.deleteBoard(k)
     }
+
+
+    $scope.log = () => {
+      console.log("you");
+    }
+
+
 
 })
 
