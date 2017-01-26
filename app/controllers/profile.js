@@ -1,6 +1,7 @@
 app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, authFactory, $location){
   $scope.numLimit = 2;
   $scope.boardPictures = [];
+  $scope.usablePicStructure = [];
 
   firebaseFactory
     .getData()
@@ -16,6 +17,7 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
       .then(function() {
         // for each board loop through the pins and add 6 to an array with boardKey: imageURL
         for (var boardsKey in $scope.boards) {
+          // ES6 function to allow boardsKey to be used as the key
           var obj = { [boardsKey] : [] };
           for (var pinKey in $scope.pins) {
             if (boardsKey === $scope.pins[pinKey].boardKey) {
@@ -24,7 +26,6 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
             }
             $scope.boardPictures.push(obj);
           }
-          // console.log($scope.boardPictures);
         }).then(function() {
           for (let i = 0; i < $scope.boardPictures.length; i++) {
             for (var key in $scope.boardPictures[i]) {
@@ -33,11 +34,16 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
                 // console.log($scope.boardPictures[i][key])
                 $scope.boardPictures[i][key] = $scope.boardPictures[i][key].slice(0, 6);
               }
-          //   console.log($scope.boardPictures[i])
             }
           }
           console.log($scope.boardPictures)
         })
+        // .then(function() {
+        //   for (var key in $scope.boardPictures) {
+        //     $scope.usablePicStructure.push({ [key] : $scope.boardPictures});
+        //     console.log('usable', $scope.usablePicStructure)
+        //   }
+        // })
       })
 
   $scope.logout = () => authFactory

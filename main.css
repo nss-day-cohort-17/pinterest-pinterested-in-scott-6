@@ -217,6 +217,7 @@ stylize any heading tags withing white-panel below
 .flexcontainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   border: 1px solid #C92228;
   /*border-radius: 0.5em;*/
   width: 227px;
