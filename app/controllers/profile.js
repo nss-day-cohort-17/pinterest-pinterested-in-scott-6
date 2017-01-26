@@ -23,7 +23,12 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
     $scope.logout = () => authFactory
     .logout()
     .then(() => $location.path('/'))
-  
+
+
+    $scope.dispModel = (a) => {
+        $scope.currentBoardModel = a
+    };
+
 })
 
 
