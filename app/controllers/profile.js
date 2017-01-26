@@ -8,6 +8,8 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory){
       console.log('pins from profile', pins.data)
       $scope.pins = pins.data;
     })
+
+
 })
 
 
