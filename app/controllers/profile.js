@@ -29,15 +29,23 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
     .then(() => $location.path('/'))
 
 
-    $scope.dispModel = (name, dscrptn) => {
-        $scope.boardname = name;
+    $scope.dispModel = (name, dscrptn, k) => {
+        $scope.boardName = name;
         $scope.boardDscrptn = dscrptn;
+        $scope.key = k;
     };
 
-
+    // Create new board from profile page
     $scope.createBoard = function() {
-      
+
       boardFactory.postBoard($scope.newBoard)
+      .then($scope.newBoard = {})
+
+    }
+
+    // Deletes new board from edit model
+    $scope.deleteBoard = function(k) {
+      boardFactory.deleteBoard(k)
     }
 
 })

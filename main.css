@@ -256,4 +256,12 @@ img {
   font-family: 'Open Sans', sans-serif;
 }
 
+.modal-footer {
+  text-align: left;
+}
+
+.save-edit {
+  float: right;
+}
+
 /* END ============================================== */
