@@ -9,13 +9,16 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory){
       $scope.pins = pins.data;
     })
 
-    // Object:
-    angular.forEach($scope.pins, function (value, prop, obj) {
-      console.log('value', value); // Todd, UK
-      console.log('prop', prop); // name, location
-      console.log('obj', obj); // { name: 'Todd', location: 'UK' }, { name: 'Todd', location: 'UK' }
-    });
-    // forEach (let$scope.pins6
+    // var obj = {a:1, b:2, c:3};
+
+    // for (var prop in obj) {
+    //   console.log('obj.' + prop, '=', obj[prop]);
+    // }
+
+    // Output:
+    // "obj.a = 1"
+    // "obj.b = 2"
+    // "obj.c = 3"
 })
 
 
