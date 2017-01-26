@@ -1,4 +1,4 @@
-app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory){
+app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, authFactory, $location){
     $scope.numLimit = 2;
     firebaseFactory.getData().then((val)=>{
       //console.log(val.data.boards);
@@ -19,6 +19,11 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory){
     // "obj.a = 1"
     // "obj.b = 2"
     // "obj.c = 3"
+
+    $scope.logout = () => authFactory
+    .logout()
+    .then(() => $location.path('/'))
+  
 })
 
 
