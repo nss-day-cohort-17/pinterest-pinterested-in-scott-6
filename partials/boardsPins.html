@@ -30,11 +30,60 @@
       </div> -->
     </div>
 
+    <!-- MODAL -->
+    <div class="modal fade" id="newpinmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create New Pin</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <div class="form-group"> <!-- Url field -->
+              <label class="control-label " for="subject">Address</label>
+              <input ng-model="newPin.webAddress" class="form-control"  name="subject" type="text" placeholder="Website URL" required/>
+              <div class="clearfix"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label"></label>
+              <input ng-model="newPin.boardKey" class="form-control" value="{{boardKey}}"/>
+            </div>
+
+            <div class="form-group"> <!-- Image field -->
+              <label class="control-label " for="subject">Image URL</label>
+              <input ng-model="newPin.imageURL" class="form-control"  name="subject" type="text" placeholder="Image URL" required/>
+              <div class="clearfix"></div>
+            </div>
+            <div class="form-group"> <!-- Title field -->
+              <label class="control-label " for="subject">Pin Title</label>
+              <input ng-model="newPin.title" class="form-control" name="subject" type="text" placeholder="Pin Title" required/>
+              <div class="clearfix"></div>
+            </div>
+
+            <div class="form-group"> <!-- Comment field -->
+              <label class="control-label " for="Comment">Pin Comment</label>
+              <textarea ng-model="newPin.comment" class="form-control" cols="40" name="message" rows="5"  placeholder="Comment" required></textarea>
+              <div class="clearfix"></div>
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn edit-button" data-dismiss="modal" ng-click="createPin()">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- PINS -->
     <div class="board row" id="pinBoot">
 
       <div class="i-pin col-xs-4">
-        <button type="button" class="btn-new-board"><span class="glyphicon glyphicon-plus"></span></button>
+        <button type="button" class="btn-new-board" data-toggle="modal" data-target="#newpinmodal" ng-click="openPinModal()"><span class="glyphicon glyphicon-plus" ></span></button>
         <div class="card-block row">
           <h4 class="card-title col-xs-12">Save Pin</h4>
         </div>

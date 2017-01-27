@@ -71,6 +71,13 @@ input:focus {
   color: white;
   border-radius: 3px;
 }
+
+.btn:hover{
+  color: red;
+}
+.btn:visited{
+  color: red;
+}
 .edit-button {
   color: grey;
   width: 25%;
@@ -220,7 +227,8 @@ stylize any heading tags withing white-panel below
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  border: 1px solid #C92228;
+  /*border: 1px solid #C92228;*/
+  border-radius: 5px;
   width: 227px;
   height: 152px;
   overflow: hidden;
@@ -267,8 +275,13 @@ img {
 }
 
 
+
 .loginPage {
   margin: 5%;
 }
 
+
+.newpin {
+  width: 200px;
+}
 /* END ============================================== */
