@@ -1,4 +1,4 @@
-app.factory('authFactory', ($q) => {
+app.factory('authFactory', ($q, $http) => {
   return{
     login(email, pass) {
       console.log('Sent to Firebase: ', email, pass)
@@ -18,8 +18,8 @@ app.factory('authFactory', ($q) => {
       return $q.resolve(firebase.auth().signOut())
     },
     createUser(obj){
-      console.log('Factory Create User Fired')
-      return $http.post('https://pinterested-in-scott-pins.firebaseio.com/users/.json');
+      console.log('Factory Create User Fired', obj)
+      return $http.post('https://pinterested-in-scott-pins.firebaseio.com/users/.json', obj);
     }
   }
 })
