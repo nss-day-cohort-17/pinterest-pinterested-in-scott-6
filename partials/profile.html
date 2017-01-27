@@ -25,76 +25,129 @@
     <!-- HEADER -->
     <div class="profile-header row">
       <h2 class="col-sm-12" ng-repeat="(k, v) in user">{{v.firstName}} {{v.lastName}}</h2>
-      <!-- <div class="col-sm-4">
-        <img class="userImg" src="https://pbs.twimg.com/profile_images/378800000314250117/3c573abbc6fd4cd6e7f9c8d2a9c3a7c8_400x400.jpeg" alt="userPhoto">
-      </div> -->
+
     </div>
     <!-- BOARD-PIN NAV -->
     <div class="row marg">
+
       <a href="#!/profile" class="board-pin-tog col-sm-2 selected">Boards</a>
       <a href="#!/pins" class="board-pin-tog col-sm-2">Pins</a>
+
     </div>
 
     <!-- BOARDS -->
     <div class="boards">
 
+
+      <div class="modal fade" id="createNewBoard" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Create New Board</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <div class="form-group"> <!-- Board field -->
+                <label class="control-label " for="subject">Board</label>
+                <input ng-model="newBoard.name" class="form-control" name="subject" type="text" placeholder="Title" ng-required="checkboxChecked" />
+              </div>
+
+              <div class="form-group"> <!-- Title field -->
+                <label class="control-label " for="Comment">Board Description</label>
+                <textarea ng-model="newBoard.description" class="form-control" cols="40" name="message" rows="5"  placeholder="Board description..." ng-required="checkboxChecked"></textarea>
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn edit-button" data-dismiss="modal" ng-click="createBoard()">Create</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
       <!-- NEW BOARD -->
       <div class="i-board col-sm-4">
-        <button type="button" class="btn-new-board"><span class="glyphicon glyphicon-plus"></span></button>
+        <button type="button" class="btn-new-board" data-toggle="modal" data-target="#createNewBoard" ng-click="postBoard()"><span class="glyphicon glyphicon-plus"></span></button>
         <div class="card-block row">
           <h4 class="card-title col-xs-12">Create Board</h4>
         </div>
       </div>
 
+
+
+
+      <!-- v EDIT MODAL v -->
+      <div class="modal fade" id="modelone" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{{boardName}}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+
+              <form name="editBoard">
+
+                <div class="form-group"> <!-- Board field -->
+                  <label class="control-label " for="subject">Edit Name</label>
+                  <input ng-model="newBoard.name" class="form-control" name="subject" type="text" value="{{boardName}}" />
+                </div>
+
+                <div class="form-group"> <!-- Title field -->
+                  <label class="control-label " for="Comment">Board Description</label>
+                  <textarea ng-model="newBoard.description" class="form-control" cols="40" name="message" rows="5"  placeholder="" >{{boardDscrptn}}</textarea>
+                </div>
+
+
+              </form>
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn edit-button" data-dismiss="modal" ng-click="deleteBoard(key)">Delete Board</button>
+              <button type="button" class="btn btn-secondary save-edit" data-dismiss="modal" ng-click="patchEdits(key)">Save Changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ^MODAL^ -->
+
       <!-- ITERATED BOARDS -->
       <div class="i-board col-sm-4" ng-repeat="(k, v) in boards">
 
-        <div class="flexcontainer">
-          <div class="setSize" ng-repeat="(key, value) in pins" ng-if="k == value.boardKey">
-            <img class="boardImages" ng-src="{{value.imageURL}}" alt="" />
+        <div ng-repeat="objects in boardPictures" ng-click="log()">
+          <div  class="flexcontainer" ng-repeat="(key, value) in objects" ng-if="k === key">
+            <div class="setSize" ng-repeat="pic in value">
+              <img class="boardImages" ng-src="{{pic}}" alt="" />
+            </div>
           </div>
         </div>
 
-        <div class="card-block row">
+
+        <div class="card-block">
+
           <h4 class="card-title col-xs-8">{{v.name}}</h4>
           <!-- Button trigger modal -->
-          <button type="button" class="btn edit-button col-xs-3" data-toggle="modal" data-target="#myModal">
+          <button type="button" class="btn edit-button col-xs-3" data-toggle="modal" data-target="#modelone" ng-click="dispModel(v.name, v.description, k)">
             Edit
           </button>
 
-          <!-- Modal -->
-          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">{{v.name}}</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-
-
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Delete</button>
-                  <button type="button" class="btn edit-button">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Modal -->
-
-          </div>
         </div>
       </div>
       <!-- END -->
 
 
-      </div>
-
-
     </div>
+
+
+
 
   </div>
 </div>
