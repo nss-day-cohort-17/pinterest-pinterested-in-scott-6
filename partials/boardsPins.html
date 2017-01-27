@@ -1,0 +1,54 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-sm-3">
+        <img class="img-responsive logoMin col-xs-12" src="images/logo.png" alt="logo">
+      </div>
+      <form ng-submit="userSearch()" class="col-sm-6 nav-search">
+        <input type="text" class="user-search" placeholder="Search">
+      </form>
+      <div class="col-xs-1 col-sm-1"><a class="glyphicon glyphicon-pushpin center" aria-labelledby="nav to new pin" href="/main.html#!/newpin"></a></div>
+      <div class="col-xs-1 col-sm-1 glyphicon glyphicon-menu-hamburger" aria-labelledby="hamburger fropdwon"></div>
+      <div class="col-xs-1 col-sm-1">
+        <a class="btn" href="index.html">Logout</a> <!-- Temp Button -->
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- PROFILE -->
+<div class="container">
+  <div class="user-profile">
+
+    <!-- HEADER -->
+    <div class="profile-header row">
+      <h2 class="col-sm-12" ng-repeat="(k, v) in user">{{v.firstName}} {{v.lastName}}</h2>
+      <!-- <div class="col-sm-4">
+        <img class="userImg" src="https://pbs.twimg.com/profile_images/378800000314250117/3c573abbc6fd4cd6e7f9c8d2a9c3a7c8_400x400.jpeg" alt="userPhoto">
+      </div> -->
+    </div>
+
+    <!-- PINS -->
+    <div class="board row" id="pinBoot">
+
+      <div class="i-pin col-xs-3">
+        <button type="button" class="btn-new-board"><span class="glyphicon glyphicon-plus"></span></button>
+        <div class="card-block row">
+          <h4 class="card-title col-xs-12">Save Pin</h4>
+        </div>
+      </div>
+
+      <div class="i-pin col-xs-3" ng-repeat="(k, v) in pins">
+        <img class="card-img-top" src="{{v.imageURL}}" alt="Card image cap">
+        <div class="card-block row">
+          <h4 class="card-title col-xs-8">{{v.title}}</h4>
+          <a href="#" class="btn edit-button col-xs-3">Edit</a>
+        </div>
+      </div>
+
+    </div>
+
+
+    </div>
+
+  </div>

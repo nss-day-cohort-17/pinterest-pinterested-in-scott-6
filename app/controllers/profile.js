@@ -82,8 +82,9 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
     }
 
 
-    $scope.log = () => {
-      console.log("you");
+    $scope.gotToPins = (key) => {
+      pinFactory.getPins()
+      .then(() => $location.path(`/${key}-pins`))
     }
 
 })
