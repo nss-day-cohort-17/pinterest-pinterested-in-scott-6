@@ -1,4 +1,3 @@
-
 app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, authFactory, boardFactory, $location){
   $scope.numLimit = 2;
   $scope.boardPictures = [];
