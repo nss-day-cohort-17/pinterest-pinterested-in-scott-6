@@ -7,10 +7,10 @@
       <form ng-submit="userSearch()" class="col-sm-6 nav-search">
         <input type="text" class="user-search" placeholder="Search">
       </form>
-      <div class="col-xs-1 col-sm-1"><a class="glyphicon glyphicon-pushpin center" aria-labelledby="nav to new pin" href="/main.html#!/newpin"></a></div>
+      <div class="col-xs-1 col-sm-1"><a class="glyphicon glyphicon-pushpin center" aria-labelledby="nav to new pin" href="#!/newpin"></a></div>
       <div class="col-xs-1 col-sm-1 glyphicon glyphicon-menu-hamburger" aria-labelledby="hamburger fropdwon"></div>
       <div class="col-xs-1 col-sm-1">
-        <a class="btn" href="index.html">Logout</a> <!-- Temp Button -->
+        <a class="btn" href="/">Logout</a> <!-- Temp Button -->
       </div>
     </div>
   </div>
@@ -29,8 +29,12 @@
     </div>
     <!-- BOARD-PIN NAV -->
     <div class="row marg">
+
+
+      <a href="#!/pins" class="board-pin-tog col-sm-2">Pins</a>
+
       <a href="/#!/profile" class="board-pin-tog col-sm-2">Boards</a>
-      <a href="#" class="board-pin-tog col-sm-2 selected">Pins</a>
+
     </div>
 
     <!-- PINS -->
@@ -39,7 +43,7 @@
       <div class="i-pin col-xs-3">
         <button type="button" class="btn-new-board"><span class="glyphicon glyphicon-plus"></span></button>
         <div class="card-block row">
-          <h4 class="card-title col-xs-12">Save Pin</h4>
+          <h4 class="card-title col-xs-12">New Pin</h4>
         </div>
       </div>
 

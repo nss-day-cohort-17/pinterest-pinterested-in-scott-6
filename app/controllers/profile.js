@@ -1,4 +1,3 @@
-
 app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, authFactory, boardFactory, $location){
   $scope.numLimit = 2;
   $scope.boardPictures = [];
@@ -55,6 +54,8 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
     .logout()
     .then(() => $location.path('/'))
 
+
+
     //passing data from board to modal so that data can be used for the $http methods
     $scope.dispModel = (name, dscrptn, k) => {
         $scope.boardName = name;
@@ -81,11 +82,10 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
       boardFactory.deleteBoard(k)
     }
 
+    //goes to pins of just the board that is clicked
+    $scope.gotToPins = (k) => $location.path(`/${k}/boardsPins`)
 
-    $scope.gotToPins = (key) => {
-      pinFactory.getPins()
-      .then(() => $location.path(`/${key}-pins`))
-    }
+
 
 })
 
