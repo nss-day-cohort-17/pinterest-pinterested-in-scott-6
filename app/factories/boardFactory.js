@@ -10,7 +10,7 @@ app.factory('boardFactory', function($http) {
       return $http.patch(`https://pinterested-in-scott-pins.firebaseio.com/boards/${board}/.json`, obj);
     },
     deleteBoard: (board) => {
-      return $http.delete(`https://pinterested-in-scott-pins.firebaseio.com/boards/${board}.json`, )
+      return $http.delete(`https://pinterested-in-scott-pins.firebaseio.com/boards/${board}.json` )
     }
   }
 })

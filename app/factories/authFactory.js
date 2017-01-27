@@ -17,8 +17,9 @@ app.factory('authFactory', ($q) => {
       console.log('Logged Out')
       return $q.resolve(firebase.auth().signOut())
     },
-    createUser(data){
-      return $http.post('https://pinterested-in-scott-pins.firebaseio.com/users/.json', data);
+    createUser(obj){
+      console.log('Factory Create User Fired')
+      return $http.post('https://pinterested-in-scott-pins.firebaseio.com/users/.json');
     }
   }
 })
