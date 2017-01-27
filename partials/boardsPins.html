@@ -7,10 +7,12 @@
       <form ng-submit="userSearch()" class="col-sm-6 nav-search">
         <input type="text" class="user-search" placeholder="Search">
       </form>
-      <div class="col-xs-1 col-sm-1"><a class="glyphicon glyphicon-pushpin center" aria-labelledby="nav to new pin" href="/main.html#!/newpin"></a></div>
+      <div class="col-xs-1 col-sm-1">
+        <a class="glyphicon glyphicon-pushpin center" aria-labelledby="nav to new pin" href="#!/newpin"></a>
+      </div>
       <div class="col-xs-1 col-sm-1 glyphicon glyphicon-menu-hamburger" aria-labelledby="hamburger fropdwon"></div>
       <div class="col-xs-1 col-sm-1">
-        <a class="btn" href="index.html">Logout</a> <!-- Temp Button -->
+        <button class="btn" ng-click="logout()"><a href="/">Logout</a></button>
       </div>
     </div>
   </div>
