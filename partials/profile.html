@@ -72,7 +72,7 @@
 
 
       <!-- NEW BOARD -->
-      <div class="i-board col-sm-4">
+      <div class="i-board col-xs-4">
         <button type="button" class="btn-new-board" data-toggle="modal" data-target="#createNewBoard" ng-click="postBoard()"><span class="glyphicon glyphicon-plus"></span></button>
         <div class="card-block row">
           <h4 class="card-title col-xs-12">Create Board</h4>
@@ -120,16 +120,15 @@
       <!-- ^MODAL^ -->
 
       <!-- ITERATED BOARDS -->
-      <div class="i-board col-sm-4" ng-repeat="(k, v) in boards">
+      <div class="i-board col-xs-4" ng-repeat="(k, v) in boards">
 
-        <div ng-repeat="objects in boardPictures" ng-click="log()">
+        <div ng-repeat="objects in boardPictures" ng-click="gotToPins(k)">
           <div  class="flexcontainer" ng-repeat="(key, value) in objects" ng-if="k === key">
             <div class="setSize" ng-repeat="pic in value">
               <img class="boardImages" ng-src="{{pic}}" alt="" />
             </div>
           </div>
         </div>
-
 
         <div class="card-block">
 

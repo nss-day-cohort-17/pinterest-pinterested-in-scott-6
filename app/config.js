@@ -41,6 +41,10 @@ $locationProvider.hashPrefix('!');
             templateUrl: '/partials/pins.html',
             //resolve: checkForAuth
         })
+        .when(`/:key/boardsPins`, {
+            controller: 'BoardsPinsCtrl',
+            templateUrl: '/partials/boardsPins.html',
+        })
         .otherwise({
             redirectTo: '/'
         })

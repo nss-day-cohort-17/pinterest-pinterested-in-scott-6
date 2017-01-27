@@ -82,10 +82,9 @@ app.controller('ProfileCrtl', function($scope, firebaseFactory, pinFactory, auth
       boardFactory.deleteBoard(k)
     }
 
+    //goes to pins of just the board that is clicked
+    $scope.gotToPins = (k) => $location.path(`/${k}/boardsPins`)
 
-    $scope.log = () => {
-      console.log("you");
-    }
 
 
 })
