@@ -1,0 +1,287 @@
+/*  Team Pinterested in Scott
+Joel Legg
+Luke Woodward
+John McCutchan
+*/
+/* Structure ======================================== */
+#newPin { /* new pin form */
+  padding: 1em;
+  margin-top: 1em;
+}
+.topMarg{
+  margin-top:20px;
+}
+.center{
+  display:block;
+  text-align:center
+}
+.logoMin{
+  min-height:45px;
+  min-width:190px;
+  display:block;
+}
+/* Skin ============================================= */
+body {
+  background-color: white;
+  color: grey;
+}
+.navbar {
+  padding: 1%;
+  font-family: 'Raleway', sans-serif;
+
+}
+.user-search {
+  max-height: 40px;
+  border-radius: 3px;
+  width: 100%;
+  background-color: lightgrey;
+  padding: 2% 2.2% 2.3%;
+  font-size: 2em;
+  border: none;
+  box-shadow: none;
+  font-weight: bold;
+}
+input:focus {
+  box-shadow: 0 0 5px grey;
+  transition: all 0.50s ease-in-out;
+  outline: none;
+}
+.glyphicon {
+  font-size: 20px;
+  color: grey;
+  text-align: center;
+  margin-top: 7px;
+}
+.glyphicon:hover {
+  color: #C92228;
+}
+
+.lightgray{
+  background-color:rgba(189, 195, 199,1.0);
+}
+#newPin { /* new pin form */
+  border: 1.5px solid grey;
+  border-radius: 1em;
+}
+.modal-content, .modal-footer, .modal-body{
+  color:black;
+}
+
+.btn {
+  color: white;
+  border-radius: 3px;
+}
+
+.btn:hover{
+  color: red;
+}
+.btn:visited{
+  color: red;
+}
+.edit-button {
+  color: grey;
+  width: 25%;
+}
+.edit-button:hover {
+  color: white;
+  background-color: #C92228;
+}
+
+
+
+/***************************/
+/* new pin form validation */
+.ng-invalid.ng-dirty {
+ border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+ border-color: #78FA89;
+}
+
+/* Breakpoints ====================================== */
+
+/* Profile ====================================== */
+
+.user-profile {
+  margin: 10% 7%;
+  color: grey;
+  font-family: 'Raleway', sans-serif;
+}
+
+.profile-header {
+  border-radius: 5px;
+  text-align: center;
+
+}
+
+.userImg {
+  border-radius: 50%;
+  border: 15px solid lightgray;
+}
+
+.marg {
+  margin: 2% 0;
+}
+
+.board-pin-tog {
+  text-align: center;
+  color: grey;
+  font-size: 1.5em;
+}
+
+.board-pin-tog:hover {
+  color: #C92228;
+  text-decoration: none;
+}
+
+.user-boards {
+  margin: 2% 0;
+  border: 1px solid grey;
+  min-height: 400px;
+  border-radius: 5px;
+
+
+}
+
+.card-block {
+  padding: 2%;
+}
+
+.white-panel {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+}
+/*
+stylize any heading tags withing white-panel below
+*/
+
+.i-board {
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 8px;
+  min-height: 200px;
+  padding: 2% 0;
+  width: 290px;
+}
+
+.i-board:hover {
+  background-color: lightgray;
+
+}
+
+.i-pin {
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 4px;
+  min-height: 200px;
+  padding: 1%;
+}
+
+.i-pin:hover {
+  background-color: lightgray;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  margin-top: -5px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-title {
+  margin-top: 7px;
+}
+
+.boards {
+  margin-top: 2%;
+}
+
+.btn-new-board {
+  background-color: white;
+  /*border: 1px solid #C92228;
+  height: 152px;
+  width: 270px;*/
+  border-radius: 8px;
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
+  border: 1px solid #C92228;
+  /*border-radius: 0.5em;*/
+  width: 257px;
+  height: 152px;
+  /*overflow: hidden;*/
+  margin: 0.2em 0.7em;
+  text-align: center;
+}
+
+.selected {
+  color: #C92228;
+  text-decoration: none;
+}
+
+.selected:visited {
+  color: #C92228;
+  text-decoration: none;
+
+}
+
+/*---------BOARD IMAGE COLLAGE----------*/
+
+.flexcontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /*border: 1px solid #C92228;*/
+  border-radius: 5px;
+  width: 227px;
+  height: 152px;
+  overflow: hidden;
+  margin: 0.2em auto;
+}
+
+.setSize {
+  display: flex;
+  width: 75px;
+  height: 75px;
+/*   overflow: hidden; */
+}
+
+.boardImages {
+  width: 75px;
+  border-radius: 0;
+}
+
+/*----------- IMPORTED ----------*/
+#pinBoot {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+}
+img {
+  border-radius: 3px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/*----------- MODEL ----------*/
+
+.modal {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.modal-footer {
+  text-align: left;
+}
+
+.save-edit {
+  float: right;
+}
+
+
+
+.loginPage {
+  margin: 5%;
+}
+
+
+.newpin {
+  width: 200px;
+}
+/* END ============================================== */

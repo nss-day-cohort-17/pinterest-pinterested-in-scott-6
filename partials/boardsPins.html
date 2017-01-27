@@ -1,0 +1,105 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="col-sm-3">
+        <img class="img-responsive logoMin col-xs-12" src="images/logo.png" alt="logo">
+      </div>
+      <form ng-submit="userSearch()" class="col-sm-6 nav-search">
+        <input type="text" class="user-search" placeholder="Search">
+      </form>
+      <div class="col-xs-1 col-sm-1">
+        <a class="glyphicon glyphicon-pushpin center" aria-labelledby="nav to new pin" href="#!/newpin"></a>
+      </div>
+      <div class="col-xs-1 col-sm-1 glyphicon glyphicon-menu-hamburger" aria-labelledby="hamburger fropdwon"></div>
+      <div class="col-xs-1 col-sm-1">
+        <button class="btn" ng-click="logout()"><a href="/">Logout</a></button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- PROFILE -->
+<div class="container">
+  <div class="user-profile">
+
+    <!-- HEADER -->
+    <div class="profile-header row" >
+      <h2 class="col-sm-12">{{v.firstName}} {{v.lastName}}</h2>
+      <!-- <div class="col-sm-4">
+        <img class="userImg" src="https://pbs.twimg.com/profile_images/378800000314250117/3c573abbc6fd4cd6e7f9c8d2a9c3a7c8_400x400.jpeg" alt="userPhoto">
+      </div> -->
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal fade" id="newpinmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Create New Pin</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <div class="form-group"> <!-- Url field -->
+              <label class="control-label " for="subject">Address</label>
+              <input ng-model="newPin.webAddress" class="form-control"  name="subject" type="text" placeholder="Website URL" required/>
+              <div class="clearfix"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label"></label>
+              <input ng-model="newPin.boardKey" class="form-control" value="{{boardKey}}"/>
+            </div>
+
+            <div class="form-group"> <!-- Image field -->
+              <label class="control-label " for="subject">Image URL</label>
+              <input ng-model="newPin.imageURL" class="form-control"  name="subject" type="text" placeholder="Image URL" required/>
+              <div class="clearfix"></div>
+            </div>
+            <div class="form-group"> <!-- Title field -->
+              <label class="control-label " for="subject">Pin Title</label>
+              <input ng-model="newPin.title" class="form-control" name="subject" type="text" placeholder="Pin Title" required/>
+              <div class="clearfix"></div>
+            </div>
+
+            <div class="form-group"> <!-- Comment field -->
+              <label class="control-label " for="Comment">Pin Comment</label>
+              <textarea ng-model="newPin.comment" class="form-control" cols="40" name="message" rows="5"  placeholder="Comment" required></textarea>
+              <div class="clearfix"></div>
+            </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn edit-button" data-dismiss="modal" ng-click="createPin()">Create</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PINS -->
+    <div class="board row" id="pinBoot">
+
+      <div class="i-pin col-xs-4">
+        <button type="button" class="btn-new-board" data-toggle="modal" data-target="#newpinmodal" ng-click="openPinModal()"><span class="glyphicon glyphicon-plus" ></span></button>
+        <div class="card-block row">
+          <h4 class="card-title col-xs-12">Save Pin</h4>
+        </div>
+      </div>
+
+      <div class="i-pin col-xs-4" ng-repeat="(k, v) in pins" ng-if="v.boardKey === boardKey">
+        <img class="card-img-top" src="{{v.imageURL}}" alt="Card image cap">
+        <div class="card-block row">
+          <h4 class="card-title col-xs-8">{{v.title}}</h4>
+          <a href="#" class="btn edit-button col-xs-3">Edit</a>
+        </div>
+      </div>
+
+    </div>
+
+
+    </div>
+
+  </div>

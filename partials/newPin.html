@@ -1,0 +1,63 @@
+<!-- New Note -->
+<!-- ++++++++ -->
+<div class="container col-md-4 col-sm-6 col-sm-offset-3 col-md-offset-4 col-xs-12">
+  <h1>New Pin</h1>
+  <form id="newPin" name="newlyPinned" ng-submit="newlyPinned.$valid && addData()" novalidate>
+
+    <div class="form-group"> <!-- Url field -->
+      <label class="control-label " for="subject">Address</label>
+      <input ng-model="newPin.webAddress" class="form-control"  name="subject" type="text" placeholder="Website URL" required/>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="form-group"> <!-- Image field -->
+      <label class="control-label " for="subject">Image URL</label>
+      <input ng-model="newPin.imageURL" class="form-control"  name="subject" type="text" placeholder="Image URL" required/>
+      <div class="clearfix"></div>
+    </div>
+
+    <!-- NEW BOARD CHECKBOX -->
+    <div class="form-group">
+      <label class="control-label" for="checkboxChecked">New Board:</label>
+      <input type="checkbox" ng-model="checkboxChecked" id="checkboxChecked" aria-label="Toggle ngHide">
+    </div>
+
+    <!-- EXISTING BOARDS -->
+    <div ng-hide="checkboxChecked" class="form-group">
+      <label class="control-label">Board</label>
+      <select ng-model="newPin.boardKey" class="form-control" ng-required="!checkboxChecked">
+        <option ng-repeat="(key, value) in boards" value={{key}}>{{value.name}}</option>
+        <option disabled>──────────</option>
+        <option value="">Select Board</option>
+      </select>
+    </div>
+
+    <!-- NEW BOARD -->
+    <div ng-show="checkboxChecked" class="form-group"> <!-- Board field -->
+      <label class="control-label " for="subject">Board</label>
+      <input ng-model="newBoard.name" class="form-control" name="subject" type="text" placeholder="Title" ng-required="checkboxChecked" />
+    </div>
+
+    <div ng-show="checkboxChecked" class="form-group"> <!-- Title field -->
+      <label class="control-label " for="Comment">Board Description</label>
+      <textarea ng-model="newBoard.description" class="form-control" cols="40" name="message" rows="5"  placeholder="Board description..." ng-required="checkboxChecked"></textarea>
+    </div>
+    <!-- END NEW BOARD -->
+
+    <div class="form-group"> <!-- Title field -->
+      <label class="control-label " for="subject">Pin Title</label>
+      <input ng-model="newPin.title" class="form-control" name="subject" type="text" placeholder="Pin Title" required/>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="form-group"> <!-- Comment field -->
+      <label class="control-label " for="Comment">Pin Comment</label>
+      <textarea ng-model="newPin.comment" class="form-control" cols="40" name="message" rows="5"  placeholder="Comment" required></textarea>
+      <div class="clearfix"></div>
+    </div>
+    <div class="form-group">
+      <button class="btn btn-success " name="submit" type="submit">Submit</button>
+       <a href="#!/profile" class="btn btn-danger" name="cancel" type="submit">Cancel</a>
+    </div>
+  </form>
+</div>
